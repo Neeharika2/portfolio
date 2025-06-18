@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  color: #de3e83;
+  color: #e51e6d;
   flex-shrink: 0;
 }
 
@@ -80,14 +80,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ea2178;
+  color: #e51e6d;
   font-size: 1.2rem;
   transition: all 0.3s ease;
   border: 1px solid #f9cfe6;
 }
 
 .social-link:hover {
-  background-color: #e71570;
+  background-color: #e51e6d;
   color: white;
   transform: translateY(-3px);
 }
@@ -126,14 +126,14 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #e31970;
+  border-color: #e51e6d;
   outline: none;
   box-shadow: 0 0 0 3px rgba(222, 62, 131, 0.1);
   background-color: white;
 }
 
 .submit-btn {
-  background: linear-gradient(45deg, #d51166, #f85fa9);
+  background: linear-gradient(45deg, #e51e6d, #fb3f9a);
   color: white;
   border: none;
   padding: 1rem 2rem;

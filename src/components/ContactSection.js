@@ -53,7 +53,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3>Email</h3>
-                <p>neeharika@example.com</p>
+                <p>neeharikagudipudi@gmail.com</p>
               </div>
             </div>
             
@@ -63,7 +63,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3>Phone</h3>
-                <p>+91 98765 43210</p>
+                <p>+91 9866538293</p>
               </div>
             </div>
             
@@ -73,19 +73,16 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3>Location</h3>
-                <p>Bangalore, India</p>
+                <p>Guntur, AndhraPradesh</p>
               </div>
             </div>
             
             <div className="social-links">
-              <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/neeharikagudipudi/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/Neeharika@" target="_blank" rel="noopener noreferrer" className="social-link">
                 <FaGithub />
-              </a>
-              <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" className="social-link">
-                <FaTwitter />
               </a>
             </div>
           </div>

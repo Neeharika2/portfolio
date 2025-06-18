@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutSection.css';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 import { smoothScrollTo } from '../utils/smoothScroll';
 
 const AboutSection = () => {
@@ -24,11 +24,11 @@ const AboutSection = () => {
             </p>
             
             <div className="about-links">
-              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/Neeharika2" target="_blank" rel="noopener noreferrer" className="social-link">
                 <FaGithub /> GitHub
               </a>
-              <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="social-link">
-  <FaLinkedin /> LinkedIn
+              <a href="https://www.linkedin.com/in/neeharikagudipudi/" target="_blank" rel="noopener noreferrer" className="social-link">
+  <FaLinkedinIn/> LinkedIn
 </a>
               <a href="/resume.pdf" download className="btn">Download Resume</a>
             </div>

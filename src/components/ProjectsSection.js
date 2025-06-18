@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './ProjectsSection.css';
 import { FaArrowLeft, FaArrowRight, FaGithub, FaExternalLinkAlt, FaTimes, FaInfoCircle } from 'react-icons/fa';
@@ -7,10 +6,31 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
+      title: "RAG PDF Summarizer",
+      description: "AI-powered application that summarizes PDF documents using RAG architecture",
+      tags: ["Python", "LangChain", "Hugging Face", "RAG", "NLP", "PDF Processing"],
+      github: "https://github.com/Neeharika2/rag-pdf-summarizer",
+      demo: "https://demo.com",
+      features: [
+        "Upload and process PDF documents of any size.",
+        "Extract text and create vector embeddings for efficient retrieval.",
+        "Generate accurate summaries using RAG (Retrieval-Augmented Generation).",
+        "Interactive chat interface to ask questions about the document.",
+        "Support for multiple file formats and batch processing."
+      ],
+      challenges: [
+        "🔍 Text Extraction: Handling complex PDF layouts, tables, and mixed content while maintaining context and structure.",
+        "⚡ Vector Storage: Implementing efficient vector database for large documents and optimizing retrieval speed.",
+        "🧠 RAG Pipeline: Fine-tuning the retrieval mechanism to fetch most relevant chunks for accurate summarization.",
+        "💾 Memory Management: Handling large documents without overwhelming system resources during processing."
+      ]
+    },
+    {
+      id: 2,
       title: "Nearby Places",
       description: "Web app to find nearby places using Google Maps API and Flask",
       tags: ["Python", "Flask","Google Maps API", "HTML5", "CSS3"],
-      github: "https://github.com",
+      github: "https://github.com/Neeharika2/Nearby-places",
       demo: "https://demo.com",
       features: [
         "Listings of rental properties with images and descriptions.",
@@ -25,11 +45,11 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Fee Tracking System",
       description: "Web application for tracking fees and payments using React and Django",
       tags: ["Python", "Flask", "Matplotlib", "Seaborn","HTML5", "CSS3"],
-      github: "https://github.com",
+      github: "https://github.com/Neeharika2/CRT_fee_tracking",
       demo: "https://demo.com",
       features: [
         "Add/view/update student records.",
@@ -44,11 +64,11 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Travel Assistant Chatbot",
       description: "Chatbot for travel assistance using Python and Flask",
       tags: [ "Flask", "Python", "API"],
-      github: "https://github.com",
+      github: "https://github.com/Neeharika2/travel_assistant_chatbot2",
       demo: "https://demo.com",
       features: [
         "Intelligent chatbot that understands natural queries.",

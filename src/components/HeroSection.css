@@ -32,7 +32,7 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
-  background: linear-gradient(45deg, #e42d6d, #f897be);
+  background: linear-gradient(45deg, #e51e6d, #f897be);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,7 +41,7 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, #e42d6d, #f76ba3);
+    background: linear-gradient(45deg, #e51e6d, #f76ba3);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -101,7 +101,7 @@
 .shape-3 {
   width: 150px;
   height: 150px;
-  background-color: #fdeaf4;
+  background-color: #f8c4e0;
   top: 50%;
   left: 0;
   opacity: 0.7;

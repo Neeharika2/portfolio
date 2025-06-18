@@ -27,7 +27,7 @@
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #de3e7e, #f88cb7);
+  background: linear-gradient(45deg, #e51e6d, #f88cb7);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,12 +57,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #de3e7e;
+  background-color: #e51e6d;
   transition: width 0.3s ease;
 }
 
 .nav-item a:hover {
-  color: #de3e6b;
+  color: #e51e6d;
 }
 
 .nav-item a:hover::after {
