@@ -1,4 +1,4 @@
-export const smoothScrollTo = (targetId, duration = 70, offset = 20) => {
+export const smoothScrollTo = (targetId, duration = 150, offset = 20) => {
   const target = document.getElementById(targetId);
   if (!target) return;
 
