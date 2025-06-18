@@ -1,9 +1,14 @@
-
 import React from 'react';
 import './AboutSection.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 const AboutSection = () => {
+  const handleScrollClick = (e, targetId) => {
+    e.preventDefault();
+    smoothScrollTo(targetId);
+  };
+
   return (
     <section className="about-section" id="about">
       <div className="container">
@@ -28,7 +33,7 @@ const AboutSection = () => {
               <a href="/resume.pdf" download className="btn">Download Resume</a>
             </div>
             
-            <a href="#projects" className="btn btn-outline view-work-btn">View My Work</a>
+            <a href="#projects" className="btn btn-outline view-work-btn" onClick={(e) => handleScrollClick(e, 'projects')}>View My Work</a>
           </div>
           
           <div className="about-decoration">

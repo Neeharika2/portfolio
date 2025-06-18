@@ -1,4 +1,3 @@
-
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -116,6 +115,13 @@
   color: #5A5A5A;
   font-size: 1rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  color: #de3e83;
+  transform: translateY(-2px);
 }
 
 .arrow-icon {

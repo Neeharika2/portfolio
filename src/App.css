@@ -1,9 +1,12 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,4 +70,9 @@ body {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+}
+
+/* Add section padding for smooth scroll offset */
+section {
+  scroll-margin-top: 80px;
 }
