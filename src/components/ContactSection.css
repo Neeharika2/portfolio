@@ -1,7 +1,6 @@
-
 .contact-section {
-  padding: 100px 0;
-  background-color: #fff;
+  padding: 80px 0;
+  background-color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -27,13 +26,14 @@
 
 .contact-info {
   flex: 1;
-  background-color: white;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border: 1px solid #f1f3f4;
 }
 
 .contact-method {
@@ -97,10 +97,11 @@
 }
 
 .contact-form {
-  background-color: white;
+  background-color: #ffffff;
   padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f3f4;
 }
 
 .form-group {
@@ -111,12 +112,12 @@
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e9ecef;
   border-radius: 8px;
   font-size: 1rem;
   color: #1E1E1E;
   transition: all 0.3s ease;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .form-group textarea {
@@ -166,6 +167,7 @@
 @media screen and (max-width: 992px) {
   .contact-container {
     flex-direction: column;
+    gap: 2rem;
   }
   
   .contact-info {
@@ -178,7 +180,66 @@
 }
 
 @media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-container {
+    gap: 1.5rem;
+  }
+  
+  .contact-info {
+    padding: 1.5rem;
+  }
+  
+  .contact-method {
+    gap: 0.8rem;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-method h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-method p {
+    font-size: 0.9rem;
+  }
+  
   .contact-form {
     padding: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-info {
+    padding: 1rem;
+  }
+  
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    justify-content: center;
   }
 }

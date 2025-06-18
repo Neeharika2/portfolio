@@ -4,6 +4,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .hero-container {
@@ -143,17 +144,94 @@
   .hero-content {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
   
-  .hero-title {
-    font-size: 3.5rem;
+  .hero-title,
+  .hero-title2 {
+    font-size: 2.5rem;
   }
   
   .hero-subtitle {
-    margin: 0 auto 2.5rem auto;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
   }
   
   .hero-buttons {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .hero-image {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding-top: 60px;
+    min-height: 90vh;
+  }
+  
+  .hero-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title,
+  .hero-title2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-right: 0;
+  }
+  
+  .shape-1 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .shape-2 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .shape-3 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title,
+  .hero-title2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 200px;
   }
 }

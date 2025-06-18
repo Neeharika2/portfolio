@@ -1,6 +1,5 @@
-
 .projects-section {
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative;
 }
 
@@ -103,10 +102,11 @@
   transition: transform 0.5s ease;
   display: flex;
   flex-direction: column;
-  background-color: rgb(254, 252, 252);
+  background-color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f3f4;
 }
 
 .project-info {
@@ -115,6 +115,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #ffffff;
 }
 
 .project-info h3 {
@@ -205,7 +206,7 @@
 }
 
 .project-modal {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 2.5rem;
   width: 100%;
@@ -214,13 +215,14 @@
   overflow-y: auto;
   position: relative;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid #e9ecef;
 }
 
 .modal-close-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: #f2f2f2;
+  background-color: #f8f9fa;
   color: #1E1E1E;
   border: none;
   width: 36px;
@@ -294,6 +296,7 @@
 @media screen and (max-width: 992px) {
   .projects-content {
     flex-direction: column;
+    gap: 2rem;
   }
   
   .project-list {
@@ -306,11 +309,57 @@
   .project-item {
     margin-bottom: 0;
   }
+  
+  .project-carousel {
+    height: 400px;
+  }
+  
+  .carousel-controls {
+    top: -50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .projects-section {
+    padding: 60px 0;
+  }
+  
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-item {
+    padding: 1rem;
+  }
+  
+  .project-item h3 {
+    font-size: 1.1rem;
+  }
+  
+  .project-carousel {
+    height: 350px;
+  }
+  
+  .project-info {
+    padding: 1.5rem;
+  }
+  
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project-tags {
+    gap: 0.3rem;
+  }
+  
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
   .project-modal {
     padding: 1.5rem;
+    margin: 1rem;
   }
   
   .project-modal h2 {
@@ -319,5 +368,29 @@
   
   .modal-section h3 {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-carousel {
+    height: 320px;
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-actions {
+    gap: 0.8rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .project-link {
+    text-align: center;
+    justify-content: center;
   }
 }

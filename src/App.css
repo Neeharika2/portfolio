@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +5,16 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(to right, #fde8f2, #fff6fb);
   color: #1E1E1E;
+  overflow-x: hidden;
+  /* Force light theme */
+  background-color: #ffffff !important;
 }
 
 .container {
@@ -39,8 +45,13 @@ body {
 
 .btn-outline {
   background-color: transparent;
-  color:  #e51e6d;;
-  border: 2px solid  #e51e6d;;
+  color: #e51e6d;
+  border: 2px solid #e51e6d;
+}
+
+.btn-outline:hover {
+  background-color: #e51e6d;
+  color: white;
 }
 
 .section-title {
@@ -48,6 +59,7 @@ body {
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
+  color: #1E1E1E;
 }
 
 .section-title::after {
@@ -67,4 +79,79 @@ body {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+}
+
+/* Add section padding for smooth scroll offset */
+section {
+  scroll-margin-top: 80px;
+  background-color: transparent;
+}
+
+/* Ensure all text remains dark on light background */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  color: inherit;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  section {
+    scroll-margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* App transition styles */
+.main-content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: #ffffff;
+}
+
+.main-content.fade-in {
+  opacity: 1;
+}
+
+.main-content.hidden {
+  display: none;
+}
+
+/* Force light theme for all components */
+* {
+  color-scheme: light !important;
+}
+
+/* Override any potential dark theme styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to right, #fde8f2, #fff6fb) !important;
+    color: #1E1E1E !important;
+  }
 }
