@@ -71,12 +71,12 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f8f9fa;
-  border: 2px solid #e9ecef;
+  background-color: #323232;
+  border: 2px solid #1a1a1a;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  color: #1E1E1E;
+  color: #ffffff;
   font-family: 'Fira Code', monospace;
   overflow: hidden;
   z-index: 2;
@@ -90,7 +90,7 @@
 }
 
 .code-block code {
-  color: #495057;
+  color: #ededed;
 }
 
 @keyframes float {
@@ -106,27 +106,53 @@
 }
 
 @media screen and (max-width: 992px) {
+  .about-section {
+    padding: 80px 0 100px 0;
+  }
+  
   .about-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .about-text {
+    order: 1;
+    width: 100%;
+    text-align: center;
   }
   
   .about-decoration {
-    height: 300px;
+    order: 2;
+    height: 350px;
     width: 100%;
+    max-width: 500px;
     margin-top: 2rem;
+  }
+  
+  .code-block {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 @media screen and (max-width: 768px) {
   .about-section {
-    padding: 60px 0;
+    padding: 60px 0 80px 0;
+  }
+  
+  .about-content {
+    gap: 2rem;
   }
   
   .about-links {
     flex-direction: column;
     gap: 0.8rem;
     align-items: stretch;
+    margin-bottom: 2rem;
   }
   
   .about-links .social-link {
@@ -134,11 +160,32 @@
     justify-content: center;
     padding: 0.8rem 1rem;
     min-width: auto;
+    width: 100%;
+  }
+  
+  .about-links .btn {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .view-work-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .about-decoration {
+    height: 300px;
+    margin-top: 1rem;
   }
   
   .code-block {
-    width: 95%;
+    width: 100%;
     padding: 1rem;
+    position: static;
+    transform: none;
+    margin: 0 auto;
   }
   
   .code-block pre {
@@ -147,6 +194,14 @@
 }
 
 @media screen and (max-width: 480px) {
+  .about-section {
+    padding: 50px 0 70px 0;
+  }
+  
+  .about-content {
+    gap: 1.5rem;
+  }
+  
   .about-decoration {
     height: 250px;
   }
@@ -157,5 +212,10 @@
   
   .code-block pre {
     font-size: 0.7rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+    text-align: left;
   }
 }

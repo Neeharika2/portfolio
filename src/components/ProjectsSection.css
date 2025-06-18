@@ -294,38 +294,59 @@
 }
 
 @media screen and (max-width: 992px) {
+  .projects-section {
+    padding: 80px 0 100px 0;
+  }
+  
   .projects-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
   
   .project-list {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    order: 1;
+  }
+  
+  .project-display {
+    order: 2;
+    width: 100%;
   }
   
   .project-item {
     margin-bottom: 0;
+    text-align: center;
   }
   
   .project-carousel {
-    height: 400px;
+    height: 450px;
+    margin-top: 2rem;
   }
   
   .carousel-controls {
     top: -50px;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   .projects-section {
-    padding: 60px 0;
+    padding: 60px 0 80px 0;
+  }
+  
+  .projects-content {
+    gap: 2rem;
   }
   
   .project-list {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
   
   .project-item {
@@ -337,7 +358,12 @@
   }
   
   .project-carousel {
-    height: 350px;
+    height: 400px;
+    margin-top: 1.5rem;
+  }
+  
+  .project-card {
+    height: 90%;
   }
   
   .project-info {
@@ -350,6 +376,7 @@
   
   .project-tags {
     gap: 0.3rem;
+    margin-bottom: 1rem;
   }
   
   .tag {
@@ -357,31 +384,9 @@
     padding: 0.2rem 0.4rem;
   }
   
-  .project-modal {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-  
-  .project-modal h2 {
-    font-size: 1.5rem;
-  }
-  
-  .modal-section h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .project-carousel {
-    height: 320px;
-  }
-  
-  .project-info {
-    padding: 1rem;
-  }
-  
   .project-actions {
     gap: 0.8rem;
+    margin-top: 1rem;
   }
   
   .project-links {
@@ -392,5 +397,108 @@
   .project-link {
     text-align: center;
     justify-content: center;
+    padding: 0.6rem 1rem;
+  }
+  
+  .project-details-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .project-modal {
+    padding: 1.5rem;
+    margin: 0.5rem;
+    max-height: 85vh;
+  }
+  
+  .project-modal h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .modal-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-section {
+    padding: 50px 0 70px 0;
+  }
+  
+  .projects-content {
+    gap: 1.5rem;
+  }
+  
+  .project-carousel {
+    height: 380px;
+  }
+  
+  .project-card {
+    height: 95%;
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-tags {
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-actions {
+    gap: 0.6rem;
+  }
+  
+  .project-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .project-details-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .carousel-controls {
+    top: -40px;
+  }
+  
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .project-modal {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .project-modal h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-list li, .challenge-list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
