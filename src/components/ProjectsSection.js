@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       description: "AI-powered application that summarizes PDF documents using RAG architecture",
       tags: ["Python", "LangChain", "Hugging Face", "RAG", "NLP", "PDF Processing"],
       github: "https://github.com/Neeharika2/rag-pdf-summarizer",
-      demo: "https://demo.com",
+      demo: "",
       features: [
         "Upload and process PDF documents of any size.",
         "Extract text and create vector embeddings for efficient retrieval.",
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
       description: "Web app to find nearby places using Google Maps API and Flask",
       tags: ["Python", "Flask","Google Maps API", "HTML5", "CSS3"],
       github: "https://github.com/Neeharika2/Nearby-places",
-      demo: "https://demo.com",
+      demo: "",
       features: [
         "Listings of rental properties with images and descriptions.",
         "Integration with map services to show nearby places.",
@@ -50,7 +50,7 @@ const ProjectsSection = () => {
       description: "Web application for tracking fees and payments using React and Django",
       tags: ["Python", "Flask", "Matplotlib", "Seaborn","HTML5", "CSS3"],
       github: "https://github.com/Neeharika2/CRT_fee_tracking",
-      demo: "https://demo.com",
+      demo: "",
       features: [
         "Add/view/update student records.",
         "Toggle fee status (Paid/Unpaid).",
@@ -69,7 +69,7 @@ const ProjectsSection = () => {
       description: "Chatbot for travel assistance using Python and Flask",
       tags: [ "Flask", "Python", "API"],
       github: "https://github.com/Neeharika2/travel_assistant_chatbot2",
-      demo: "https://demo.com",
+      demo: "",
       features: [
         "Intelligent chatbot that understands natural queries.",
         "Suggests must-visit places, foods, and custom itineraries.",
