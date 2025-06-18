@@ -1,0 +1,153 @@
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(45deg, #e42d6d, #f897be);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-title2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #e42d6d, #f76ba3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.hero-subtitle {
+  color: #5A5A5A;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-image img {
+  max-width: 90%;
+  z-index: 2;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background-color: #f9cfe6;
+  top: -50px;
+  right: 0;
+  opacity: 0.6;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background-color: #f88ccb;
+  bottom: 0;
+  right: 100px;
+  opacity: 0.4;
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  background-color: #fdeaf4;
+  top: 50%;
+  left: 0;
+  opacity: 0.7;
+}
+
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  color: #5A5A5A;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  animation: bounce 1.5s infinite;
+  transform: rotate(90deg);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-subtitle {
+    margin: 0 auto 2.5rem auto;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
