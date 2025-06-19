@@ -150,8 +150,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 
 /* Override any potential dark theme styles */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(to right, #fde8f2, #fff6fb) !important;
-    color: #1E1E1E !important;
+  :root {
+    color-scheme: light; 
   }
 }
