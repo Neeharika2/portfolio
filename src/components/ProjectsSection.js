@@ -6,6 +6,48 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
+      title: "GiGy – Simplified Freelance Platform",
+      description: "A minimalist freelance marketplace with real-time chat, gig posting, and seamless user experience.",
+      tags: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.IO",
+        "JWT",
+        "NGINX",
+        "PM2"
+      ],
+      github: "https://github.com/Neeharika2/GiGy",
+      demo: "http://4.240.88.99/",
+      features: [
+        "User registration and authentication with JWT.",
+        "Gig posting, assignment, and completion flow.",
+        "Applications and reviews for gigs.",
+        "Real-time chat with Socket.IO and room-based logic.",
+        "Profile management with image uploads via Cloudinary.",
+        "Secure REST API endpoints with token-based auth.",
+        "Production deployment with NGINX and PM2 on Azure."
+      ],
+      challenges: [
+        "💬 Real-Time Chat: Implementing room-based logic and handling socket disconnections/reconnections.",
+        "🔑 Authentication: Secure handling of token expiration during API requests.",
+        "📷 File Uploads: Syncing Cloudinary uploads with MongoDB document updates.",
+        "⚙️ Deployment: Configuring NGINX reverse proxy, SSL certificates, and PM2 process management.",
+        "⚡ Performance: Stress-testing endpoints with K6 and debugging MongoDB query performance."
+      ],
+      contributions: [
+        "Designed and implemented the full RESTful backend architecture.",
+        "Built models and controllers for users, gigs, and applications.",
+        "Developed real-time chat functionality using Socket.IO.",
+        "Integrated Cloudinary for image uploads with secure API calls.",
+        "Set up production deployment using NGINX and PM2 on Azure.",
+        "Debugged MongoDB queries and optimized API performance.",
+        "Implemented real-time performance testing with K6."
+      ],
+    },
+    {
+      id: 2,
       title: "RAG PDF Summarizer",
       description: "AI-powered application that summarizes PDF documents using RAG architecture",
       tags: ["Python", "LangChain", "Hugging Face", "RAG", "NLP", "PDF Processing"],
@@ -26,7 +68,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 2,
+      id: 4,
       title: "Nearby Places",
       description: "Web app to find nearby places using Google Maps API and Flask",
       tags: ["Python", "Flask","Google Maps API", "HTML5", "CSS3"],
@@ -64,7 +106,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Travel Assistant Chatbot",
       description: "Chatbot for travel assistance using Python and Flask",
       tags: [ "Flask", "Python", "API"],
