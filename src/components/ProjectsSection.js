@@ -6,7 +6,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "GiGy – Simplified Freelance Platform",
+      title: "GiGy - Simplified Freelance Platform",
       description: "A minimalist freelance marketplace with real-time chat, gig posting, and seamless user experience.",
       tags: [
         "React.js",
@@ -35,15 +35,6 @@ const ProjectsSection = () => {
         "📷 File Uploads: Syncing Cloudinary uploads with MongoDB document updates.",
         "⚙️ Deployment: Configuring NGINX reverse proxy, SSL certificates, and PM2 process management.",
         "⚡ Performance: Stress-testing endpoints with K6 and debugging MongoDB query performance."
-      ],
-      contributions: [
-        "Designed and implemented the full RESTful backend architecture.",
-        "Built models and controllers for users, gigs, and applications.",
-        "Developed real-time chat functionality using Socket.IO.",
-        "Integrated Cloudinary for image uploads with secure API calls.",
-        "Set up production deployment using NGINX and PM2 on Azure.",
-        "Debugged MongoDB queries and optimized API performance.",
-        "Implemented real-time performance testing with K6."
       ],
     },
     {

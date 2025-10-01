@@ -8,7 +8,7 @@ const AchievementsSection = () => {
     {
       icon: <FaCode />,
       title: "LeetCode",
-      description: "350+ problems solved"
+      description: "450+ problems solved"
     },
     {
       icon: <FaHackerrank />,
