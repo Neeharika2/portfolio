@@ -20,20 +20,19 @@ jobs:
 
       - name: Check for README
         id: readme_check
-        shell: bash
         run: |
           if [ -f README.md ]; then
             echo "has_readme=true" >> $GITHUB_OUTPUT
           else
             echo "has_readme=false" >> $GITHUB_OUTPUT
           fi
+        shell: bash
 
       - name: Send dispatch to portfolio repo
         if: steps.readme_check.outputs.has_readme == 'true'
         env:
           PORTFOLIO_REPO: Neeharika2/portfolio
           DISPATCH_TOKEN: ${{ secrets.PORTFOLIO_REPO_TOKEN }}
-        shell: bash
         run: |
           # Read and escape README content
           README_CONTENT=$(cat README.md | jq -Rs .)
@@ -68,3 +67,4 @@ jobs:
             echo "❌ Failed to send dispatch to portfolio repo"
             exit 1
           fi
+        shell: bash
