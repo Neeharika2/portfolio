@@ -24,9 +24,6 @@ jobs:
         run: |
           if [ -f README.md ]; then
             echo "has_readme=true" >> $GITHUB_OUTPUT
-            # Read README and escape for JSON
-            README_CONTENT=$(cat README.md | jq -Rs .)
-            echo "readme_content=$README_CONTENT" >> $GITHUB_OUTPUT
           else
             echo "has_readme=false" >> $GITHUB_OUTPUT
           fi
@@ -38,12 +35,15 @@ jobs:
           DISPATCH_TOKEN: ${{ secrets.PORTFOLIO_REPO_TOKEN }}
         shell: bash
         run: |
+          # Read and escape README content
+          README_CONTENT=$(cat README.md | jq -Rs .)
+          
           # Create JSON payload
           PAYLOAD=$(jq -n \
             --arg owner "${{ github.repository_owner }}" \
             --arg repo "${{ github.event.repository.name }}" \
             --arg url "${{ github.event.repository.html_url }}" \
-            --argjson readme ${{ steps.readme_check.outputs.readme_content }} \
+            --argjson readme "$README_CONTENT" \
             '{
               event_type: "new_project_readme",
               client_payload: {
