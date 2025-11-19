@@ -1,0 +1,187 @@
+{
+  "projects": [
+    {
+      "id": "Neeharika2-nlp-to-sql",
+      "title": "NLP to SQL Query Interface",
+      "description": "A modern web application that converts natural language queries into SQL using AI, with interactive data visualization and multi-database support.",
+      "tags": [
+        "Node.js",
+        "Express.js",
+        "Passport.js",
+        "Google Gemini AI",
+        "EJS",
+        "Chart.js",
+        "Font Awesome",
+        "html2canvas",
+        "jsPDF",
+        "MySQL",
+        "PostgreSQL",
+        "Microsoft SQL Server",
+        "MongoDB",
+        "Supabase",
+        "Firebase",
+        "AWS RDS"
+      ],
+      "github": "https://github.com/Neeharika2/nlp-to-sql",
+      "demo": "",
+      "features": [
+        "Natural language to SQL query conversion using Google Gemini AI",
+        "Interactive data visualization with AI-powered smart chart suggestions",
+        "Support for multiple database types including MySQL, PostgreSQL, and MongoDB",
+        "User-friendly interface with tab-based layout, collapsible sidebar, and schema explorer",
+        "Comprehensive query management including history, saved queries, and suggested patterns",
+        "Google OAuth authentication with secure session management",
+        "Data export capabilities (CSV, Excel) and interactive table features like search and sorting"
+      ],
+      "challenges": [],
+      "dateAdded": "2025-11-19T15:06:33.550Z",
+      "source": "auto-test",
+      "longDescription": "A modern web application that converts natural language queries into SQL using Google Gemini AI, offering interactive data visualization and multi-database support. It provides intelligent query understanding, AI-powered chart suggestions, and a user-friendly interface for database interaction, authentication, and data management."
+    },
+    {
+      "id": "Neeharika2-GiGy",
+      "title": "GiGy - Simplified Freelance Platform",
+      "description": "A minimalist freelance marketplace with real-time chat, gig posting, and seamless user experience.",
+      "tags": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.IO",
+        "JWT",
+        "NGINX",
+        "PM2"
+      ],
+      "github": "https://github.com/Neeharika2/GiGy",
+      "demo": "http://4.240.88.99/",
+      "features": [
+        "User registration and authentication with JWT.",
+        "Gig posting, assignment, and completion flow.",
+        "Applications and reviews for gigs.",
+        "Real-time chat with Socket.IO and room-based logic.",
+        "Profile management with image uploads via Cloudinary.",
+        "Secure REST API endpoints with token-based auth.",
+        "Production deployment with NGINX and PM2 on Azure."
+      ],
+      "challenges": [
+        "💬 Real-Time Chat: Implementing room-based logic and handling socket disconnections/reconnections.",
+        "🔑 Authentication: Secure handling of token expiration during API requests.",
+        "📷 File Uploads: Syncing Cloudinary uploads with MongoDB document updates.",
+        "⚙️ Deployment: Configuring NGINX reverse proxy, SSL certificates, and PM2 process management.",
+        "⚡ Performance: Stress-testing endpoints with K6 and debugging MongoDB query performance."
+      ],
+      "dateAdded": "2025-11-19T00:00:00Z",
+      "source": "manual"
+    },
+    {
+      "id": "Neeharika2-rag-pdf-summarizer",
+      "title": "RAG PDF Summarizer",
+      "description": "AI-powered application that summarizes PDF documents using RAG architecture",
+      "tags": [
+        "Python",
+        "LangChain",
+        "Hugging Face",
+        "RAG",
+        "NLP",
+        "PDF Processing"
+      ],
+      "github": "https://github.com/Neeharika2/rag-pdf-summarizer",
+      "demo": "",
+      "features": [
+        "Upload and process PDF documents of any size.",
+        "Extract text and create vector embeddings for efficient retrieval.",
+        "Generate accurate summaries using RAG (Retrieval-Augmented Generation).",
+        "Interactive chat interface to ask questions about the document.",
+        "Support for multiple file formats and batch processing."
+      ],
+      "challenges": [
+        "🔍 Text Extraction: Handling complex PDF layouts, tables, and mixed content while maintaining context and structure.",
+        "⚡ Vector Storage: Implementing efficient vector database for large documents and optimizing retrieval speed.",
+        "🧠 RAG Pipeline: Fine-tuning the retrieval mechanism to fetch most relevant chunks for accurate summarization.",
+        "💾 Memory Management: Handling large documents without overwhelming system resources during processing."
+      ],
+      "dateAdded": "2025-11-19T00:00:00Z",
+      "source": "manual"
+    },
+    {
+      "id": "Neeharika2-Nearby-places",
+      "title": "Nearby Places",
+      "description": "Web app to find nearby places using Google Maps API and Flask",
+      "tags": [
+        "Python",
+        "Flask",
+        "Google Maps API",
+        "HTML5",
+        "CSS3"
+      ],
+      "github": "https://github.com/Neeharika2/Nearby-places",
+      "demo": "",
+      "features": [
+        "Listings of rental properties with images and descriptions.",
+        "Integration with map services to show nearby places.",
+        "Route visualization to selected properties.",
+        "User-friendly, responsive design."
+      ],
+      "challenges": [
+        "📍 Accurate Mapping: Integrating location APIs and ensuring accurate geolocation data was tricky.",
+        "🧭 Route Optimization: Implementing route visualizations dynamically depending on user location required handling real-time geolocation.",
+        "🔍 Filtering Nearby Places: Filtering and displaying only relevant nearby places without cluttering the map UI took careful design planning."
+      ],
+      "dateAdded": "2025-11-19T00:00:00Z",
+      "source": "manual"
+    },
+    {
+      "id": "Neeharika2-CRT_fee_tracking",
+      "title": "Fee Tracking System",
+      "description": "Web application for tracking fees and payments using React and Django",
+      "tags": [
+        "Python",
+        "Flask",
+        "Matplotlib",
+        "Seaborn",
+        "HTML5",
+        "CSS3"
+      ],
+      "github": "https://github.com/Neeharika2/CRT_fee_tracking",
+      "demo": "",
+      "features": [
+        "Add/view/update student records.",
+        "Toggle fee status (Paid/Unpaid).",
+        "Visualize data using bar graphs and pie charts.",
+        "Export filtered records (paid/unpaid) to Excel sheets."
+      ],
+      "challenges": [
+        "📈 Dynamic Graph Generation: Creating real-time visual graphs using Matplotlib and Seaborn based on database changes.",
+        "📤 Excel Export: Automating data export with filters (only paid/unpaid) and formatting it in a readable way.",
+        "💾 Data Management: Managing a clean and searchable student database that scales well with large entries."
+      ],
+      "dateAdded": "2025-11-19T00:00:00Z",
+      "source": "manual"
+    },
+    {
+      "id": "Neeharika2-travel_assistant_chatbot2",
+      "title": "Travel Assistant Chatbot",
+      "description": "Chatbot for travel assistance using Python and Flask",
+      "tags": [
+        "Flask",
+        "Python",
+        "API"
+      ],
+      "github": "https://github.com/Neeharika2/travel_assistant_chatbot2",
+      "demo": "",
+      "features": [
+        "Intelligent chatbot that understands natural queries.",
+        "Suggests must-visit places, foods, and custom itineraries.",
+        "Provides travel tips and local customs.",
+        "Easy integration into websites or apps."
+      ],
+      "challenges": [
+        "🧠 AI Response Quality: Training/using the AI to provide contextually accurate and culturally relevant travel recommendations.",
+        "🌍 Dynamic Recommendations: Ensuring recommendations are tailored to the user's preferences and location.",
+        "🔌 Integration: Embedding the chatbot into the UI without affecting performance or responsiveness."
+      ],
+      "dateAdded": "2025-11-19T00:00:00Z",
+      "source": "manual"
+    }
+  ]
+}

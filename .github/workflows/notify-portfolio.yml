@@ -1,0 +1,70 @@
+name: Notify Portfolio
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'README.md'
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check for README
+        id: readme_check
+        shell: bash
+        run: |
+          if [ -f README.md ]; then
+            echo "has_readme=true" >> $GITHUB_OUTPUT
+            # Read README and escape for JSON
+            README_CONTENT=$(cat README.md | jq -Rs .)
+            echo "readme_content=$README_CONTENT" >> $GITHUB_OUTPUT
+          else
+            echo "has_readme=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Send dispatch to portfolio repo
+        if: steps.readme_check.outputs.has_readme == 'true'
+        env:
+          PORTFOLIO_REPO: Neeharika2/portfolio
+          DISPATCH_TOKEN: ${{ secrets.PORTFOLIO_REPO_TOKEN }}
+        shell: bash
+        run: |
+          # Create JSON payload
+          PAYLOAD=$(jq -n \
+            --arg owner "${{ github.repository_owner }}" \
+            --arg repo "${{ github.event.repository.name }}" \
+            --arg url "${{ github.event.repository.html_url }}" \
+            --argjson readme ${{ steps.readme_check.outputs.readme_content }} \
+            '{
+              event_type: "new_project_readme",
+              client_payload: {
+                owner: $owner,
+                repo: $repo,
+                html_url: $url,
+                readme: $readme
+              }
+            }')
+
+          # Send repository dispatch
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token $DISPATCH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$PORTFOLIO_REPO/dispatches" \
+            -d "$PAYLOAD"
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Successfully sent dispatch to portfolio repo"
+          else
+            echo "❌ Failed to send dispatch to portfolio repo"
+            exit 1
+          fi
