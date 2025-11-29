@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   update:
@@ -17,13 +16,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create feature branch
-        run: |
-          BRANCH_NAME="update-project-${{ github.event.client_payload.repo }}-$(date +%s)"
-          git checkout -b "$BRANCH_NAME"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
       - name: Update projects data
         run: |
@@ -41,74 +33,23 @@ jobs:
           }
           EOF
           
-          echo "✅ Updated project data for ${{ github.event.client_payload.repo }}"
-          cat "$PROJECT_FILE"
-
-      - name: Check for changes
-        id: check_changes
-        run: |
-          git add data/projects/
-          if git diff --staged --quiet; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No changes detected"
-          else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "✅ Changes detected"
-          fi
+          echo "Updated project data for ${{ github.event.client_payload.repo }}"
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          git commit -m "Update project: ${{ github.event.client_payload.repo }}" \
-                     -m "Auto-updated project data from repository_dispatch event" \
-                     -m "Repository: ${{ github.event.client_payload.html_url }}"
+          git add data/projects/
           
-          git push -u origin "$BRANCH_NAME"
-
-      - name: Create Pull Request
-        if: steps.check_changes.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BRANCH_NAME }}
-          title: "🤖 Update project: ${{ github.event.client_payload.repo }}"
-          body: |
-            ## Auto-generated Project Update
-            
-            This PR updates the project data for **${{ github.event.client_payload.repo }}**.
-            
-            ### Details
-            - **Repository**: ${{ github.event.client_payload.html_url }}
-            - **Owner**: ${{ github.event.client_payload.owner }}
-            - **Updated**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
-            
-            ### Changes
-            - Updated `data/projects/${{ github.event.client_payload.repo }}.json`
-            
-            ---
-            *This PR was automatically created by GitHub Actions*
-          labels: |
-            automated
-            project-update
-          assignees: ${{ github.repository_owner }}
-
-      - name: Auto-merge PR (optional)
-        if: steps.check_changes.outputs.has_changes == 'true'
-        run: |
-          echo "ℹ️ PR created successfully"
-          echo "To enable auto-merge, uncomment the merge step below"
-          # gh pr merge ${{ env.BRANCH_NAME }} --auto --squash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Summary
-        if: always()
-        run: |
-          if [ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]; then
-            echo "✅ Project updated and PR created: ${{ github.event.client_payload.repo }}"
-          else
-            echo "ℹ️ No changes needed for: ${{ github.event.client_payload.repo }}"
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
           fi
+          
+          # Commit changes
+          git commit -m "Update project: ${{ github.event.client_payload.repo }}"
+          
+          # Push directly to main (since we checked out main)
+          git push origin main
