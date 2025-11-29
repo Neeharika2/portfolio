@@ -2,7 +2,7 @@ name: Update Projects
 
 on:
   repository_dispatch:
-    types: [new_project_readme]
+    types: [new_readme_received]
 
 permissions:
   contents: write
@@ -16,21 +16,19 @@ jobs:
 
       - name: Update projects data
         run: |
-          # Create projects directory if it doesn't exist
           mkdir -p data/projects
           
-          # Save project data
           PROJECT_FILE="data/projects/${{ github.event.client_payload.repo }}.json"
           
           echo '{
             "name": "${{ github.event.client_payload.repo }}",
             "owner": "${{ github.event.client_payload.owner }}",
             "url": "${{ github.event.client_payload.html_url }}",
-            "readme": ${{ github.event.client_payload.readme }},
+            "readme": '${{ toJson(github.event.client_payload.readme) }}',
             "updated_at": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'"
           }' > "$PROJECT_FILE"
           
-          echo "✅ Updated project data for ${{ github.event.client_payload.repo }}"
+          echo "Updated project data for ${{ github.event.client_payload.repo }}"
 
       - name: Commit changes
         run: |
